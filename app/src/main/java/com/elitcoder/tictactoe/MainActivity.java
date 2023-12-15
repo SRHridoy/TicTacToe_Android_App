@@ -2,7 +2,9 @@ package com.elitcoder.tictactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -63,31 +65,32 @@ public class MainActivity extends AppCompatActivity {
                 //Conditions :
                 if (b1.equals(b2) && b2.equals(b3) && !b1.equals("")) {
                     Toast.makeText(this, "Winner is : " + b1, Toast.LENGTH_LONG).show();
-                    newGame();
+                    //Delay start using handler :used to see result then delay some time and then restart the game...
+                    delayStart();
                 } else if (b4.equals(b5) && b5.equals(b6) && !b4.equals("")) {
                     Toast.makeText(this, "Winner is : " + b4, Toast.LENGTH_LONG).show();
-                    newGame();
+                    delayStart();
                 } else if (b7.equals(b8) && b8.equals(b9) && !b7.equals("")) {
                     Toast.makeText(this, "Winner is : " + b7, Toast.LENGTH_LONG).show();
-                    newGame();
+                    delayStart();
                 } else if (b1.equals(b4) && b4.equals(b7) && !b1.equals("")) {
                     Toast.makeText(this, "Winner is : " + b1, Toast.LENGTH_LONG).show();
-                    newGame();
+                    delayStart();
                 } else if (b2.equals(b5) && b5.equals(b8) && !b2.equals("")) {
                     Toast.makeText(this, "Winner is : " + b2, Toast.LENGTH_LONG).show();
-                    newGame();
+                    delayStart();
                 } else if (b3.equals(b6) && b6.equals(b9) && !b3.equals("")) {
                     Toast.makeText(this, "Winner is : " + b3, Toast.LENGTH_LONG).show();
-                    newGame();
+                    delayStart();
                 } else if (b1.equals(b5) && b5.equals(b9) && !b1.equals("")) {
                     Toast.makeText(this, "Winner is : " + b1, Toast.LENGTH_LONG).show();
-                    newGame();
+                    delayStart();
                 } else if (b3.equals(b5) && b5.equals(b7) && !b3.equals("")) {
                     Toast.makeText(this, "Winner is : " + b3, Toast.LENGTH_LONG).show();
-                    newGame();
+                    delayStart();
                 }else if(count==9){
                     Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
-                    newGame();
+                    delayStart();
                 }
             }
         }
@@ -104,5 +107,13 @@ public class MainActivity extends AppCompatActivity {
         btn9.setText("");
         count = 0;
         flag = 0;
+    }
+    public void delayStart(){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                newGame();
+            }
+        },5000);
     }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TicTacToe</string>
+    <string name="tic">Tic Tac Toe</string>
 </resources>
