@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+    //New game logic :
     public void newGame(){
         btn1.setText("");
         btn2.setText("");
@@ -108,12 +109,22 @@ public class MainActivity extends AppCompatActivity {
         count = 0;
         flag = 0;
     }
+    //Delay method for new game :
     public void delayStart(){
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 newGame();
+                restart();
             }
         },5000);
     }
+
+    //Restart activity:
+    public void restart(){
+        Intent restart;
+        restart = new Intent(MainActivity.this,RestartActivity.class);
+        startActivity(restart);
+    }
+
 }
