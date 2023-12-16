@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 public class Splash extends AppCompatActivity {
 
@@ -12,6 +15,9 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        ImageView imageView;
+        imageView = findViewById(R.id.imageView);
 
         //Parallel threding/asynchronus threding:
         new Handler().postDelayed(new Runnable() {
@@ -22,7 +28,11 @@ public class Splash extends AppCompatActivity {
                 iHome = new Intent(Splash.this,MainActivity.class);
                 startActivity(iHome);
             }
-        },4000);
+        },3000);
+
+        //Adding animation :
+        Animation scale = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.iconscale);
+        imageView.startAnimation(scale);
 
     }
 }

@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //init() method banassi karon ekhane id rakhbo ar encapsulate or sundor korar jonne alada function bannssi:
-        intit();
+        init();
         //Onekgulabutton same kaj tai ekta alada vabe onclick method banabo ar xml e diye dibo seta :
 
 
     }
-
-    private void intit() {
+    private void init() {
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
@@ -117,8 +117,9 @@ public class MainActivity extends AppCompatActivity {
                 newGame();
                 restart();
             }
-        },5000);
+        },2000);
     }
+    //getting data:
 
     //Restart activity:
     public void restart(){

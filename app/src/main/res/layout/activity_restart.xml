@@ -12,7 +12,7 @@
         android:id="@+id/btnRestart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/btn"
+        android:backgroundTint="@color/btnC"
         android:text="@string/start"
         android:textSize="35sp"
         android:textColor="@color/white"
