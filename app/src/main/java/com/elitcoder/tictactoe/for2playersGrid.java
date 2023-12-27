@@ -9,9 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.time.Duration;
-
-public class MainActivity extends AppCompatActivity {
+public class for2playersGrid extends AppCompatActivity {
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9;
     int flag = 0;
     int count = 0;
@@ -124,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
     //Restart activity:
     public void restart(){
         Intent restart;
-        restart = new Intent(MainActivity.this,RestartActivity.class);
+        restart = new Intent(for2playersGrid.this,RestartActivity.class);
         startActivity(restart);
     }
 

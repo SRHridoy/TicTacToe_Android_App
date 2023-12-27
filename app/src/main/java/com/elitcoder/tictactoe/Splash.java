@@ -25,7 +25,7 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 //Splash screen making:
                 Intent iHome;
-                iHome = new Intent(Splash.this,MainActivity.class);
+                iHome = new Intent(Splash.this,player_option_activity.class);
                 startActivity(iHome);
             }
         },3000);

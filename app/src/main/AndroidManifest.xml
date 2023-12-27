@@ -13,17 +13,26 @@
         android:theme="@style/Theme.TicTacToe"
         tools:targetApi="31">
         <activity
-            android:name=".NamingActivity"
+            android:name=".RestartActivity2"
             android:exported="false" />
+        <activity
+            android:name=".for3playersGrid"
+            android:exported="false" />
+        <activity
+            android:name=".player_option_activity"
+            android:exported="false"
+            android:noHistory="true" />
         <activity
             android:name=".RestartActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".for2playersGrid"
             android:exported="false" />
         <activity
             android:name=".Splash"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

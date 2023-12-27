@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class RestartActivity extends AppCompatActivity {
+public class RestartActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class RestartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent gameAgain;
-                gameAgain = new Intent(RestartActivity.this, for2playersGrid.class);
+                gameAgain = new Intent(RestartActivity2.this, for3playersGrid.class);
                 startActivity(gameAgain);
             }
         });
